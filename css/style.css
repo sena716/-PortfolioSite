@@ -1,0 +1,110 @@
+@import url(sanitize/sanitize.css);
+@import url(fontawesome/css/all.min.css);
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #E3E3E3;
+  padding: 0;
+  margin: 0;
+}
+
+body *, body *::before, body *::after {
+  box-sizing: border-box;
+}
+
+body a:link, body a:visited, body a:hover, body a:active {
+  color: #000;
+  text-decoration: none;
+}
+
+body header {
+  width: 250px;
+  height: 100vh;
+  background: #D07D3E;
+  position: fixed;
+}
+
+body header ul {
+  height: 100%;
+  padding: 100px 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+body header ul li {
+  width: 60px;
+  height: 60px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+body header ul li a {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body header ul li a i {
+  font-size: 3rem;
+}
+
+body main {
+  padding-left: 250px;
+}
+
+body main .flame {
+  padding: 0 25px;
+  max-width: 780px;
+  margin: 0 auto;
+  background: #E3E3E3;
+}
+
+body main .flame section {
+  height: 100%;
+}
+
+body main .flame section .title {
+  padding: 25px 0;
+  text-align: center;
+}
+
+body main .flame section .title h2 {
+  font-size: 5rem;
+  font-family: 'Pacifico', cursive;
+}
+
+body main .flame .top {
+  height: 100vh;
+}
+
+body main .flame .about__profile--image figure {
+  background-image: url(..images/portfolio.jpg);
+}
+
+body main .flame .about__profile table {
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+body main .flame .about__profile table tbody tr th, body main .flame .about__profile table tbody tr td {
+  text-align-last: left;
+  padding-bottom: 20px;
+}
+
+body main .flame .about__profile table tbody tr th {
+  padding: 0 30px 0 0;
+  display: flex;
+}
+
+body main .flame .about__profile table tbody tr td ul {
+  margin: 0;
+  padding-left: 20px;
+}
