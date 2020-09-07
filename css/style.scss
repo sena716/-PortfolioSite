@@ -78,7 +78,6 @@ body{
 
             // 共通
             section{
-                height: 100%;
 
                 // 各タイトル
                 .title{
@@ -210,6 +209,140 @@ body{
                     .name{
                         font-size: 2rem;
                     }
+                }
+            }
+        }
+    }
+
+    .contact{
+        width: 80%;
+        margin: 0 auto;
+        height: 100vh;
+
+        // 入力フォーム text
+        &--form{
+            font-size: 1.5rem;
+
+            div{
+                margin: 50px 0;
+                text-align: center;
+            }
+
+            .form_input{
+                position: relative;
+    
+                input[type='text'] {
+                    font: 15px/24px sans-serif;
+                    box-sizing: border-box;
+                    width: 100%;
+                    letter-spacing: 1px;
+                    padding-left: 4em;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+                .input{
+                    padding: 4px 0;
+                    border: 0;
+                    border-bottom: 1px solid #1b2538;
+                    background-color: transparent;
+                }
+                .input ~ .input_line {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    transition: 0.4s;
+                    background-color: #da3c41;
+                }
+                .input:focus ~ .input_line,
+                .form_input.input ~ .input_line {
+                    width: 100%;
+                    transition: 0.4s;
+                }
+                .input ~ label {
+                    position: absolute;
+                    padding-left: 0px;
+                    // z-index: -1;
+                    top: 6px;
+                    left: 0;
+                    transition: 0.3s;
+                    letter-spacing: 0.5px;
+                    color: #aaaaaa;
+                }
+                .input:focus ~ label, .form_input.input ~ label {
+                    font-size: 12px;
+                    top: -16px;
+                    transition: 0.3s;
+                    color: #da3c41;
+                }
+
+                textarea{
+                    font: 15px/24px sans-serif;
+                    box-sizing: border-box;
+                    width: 100%;
+                    letter-spacing: 1px;
+                    padding-left: 4em;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+                .input{
+                    padding: 4px 0;
+                    border: 0;
+                    border-bottom: 1px solid #1b2538;
+                    background-color: transparent;
+                }
+                .input ~ .input_line {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    transition: 0.4s;
+                    background-color: #da3c41;
+                }
+                .input:focus ~ .input_line,
+                .form_input.input ~ .input_line {
+                    width: 100%;
+                    transition: 0.4s;
+                }
+                .input ~ label {
+                    position: absolute;
+                    padding-left: 0px;
+                    // z-index: -1;
+                    top: 6px;
+                    left: 0;
+                    transition: 0.3s;
+                    letter-spacing: 0.5px;
+                    color: #aaaaaa;
+                }
+                .input:focus ~ label, .form_input.input ~ label {
+                    font-size: 12px;
+                    top: -16px;
+                    transition: 0.3s;
+                    color: #da3c41;
+                }
+            }
+            
+            // 入力フォーム primary
+            .form_dropdown{
+    
+                select{
+                    padding: 0 15px;
+                    border: none;
+                    border-bottom: 1px solid #000;
+                }
+            }
+    
+            // 入力フォーム button
+            .form_button{
+                input{
+                    padding: 0 15px;
+                    border: none;
+                    background-color: #E3E3E3;
+                    border-bottom: 1px solid #000;
                 }
             }
         }
