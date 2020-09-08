@@ -10,13 +10,23 @@ $pc: 1080px;
 $mainPc: 780px;
 
 html{
+    scroll-behavior: smooth;
     font-size: 62.5%;
+
+    @media screen and ( max-width: 1080px ){
+        font-size: 37.5%;
+    }
 }
 
 body{
     background-color: #E3E3E3;
     padding: 0;
     margin: 0;
+
+    p{
+        padding: 0;
+        margin: 0;
+    }
 
     *,*::before, *::after{
         box-sizing: border-box;
@@ -27,12 +37,75 @@ body{
         text-decoration: none;
     }
 
+    .active{
+        display: inline-block;
+    }
+
+    // ハンバーガーメニュー
+    .Toggle {
+        display: none;
+        position: fixed;    /* bodyに対しての絶対位置指定 */
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        z-index: 3;
+        right:30px;
+        top: 30px;
+
+        @media screen and ( max-width: 1080px ){
+            display: inline-block;
+        }
+
+        span {
+            display: block;
+            position: absolute;
+            width: 40px;
+            border-bottom: solid 4px #333;
+            -webkit-transition: .35s ease-in-out;
+            -moz-transition: .35s ease-in-out;	
+            transition: .35s ease-in-out;		
+
+            &:nth-child(1) {
+                top:5px;
+            }
+            &:nth-child(2) {
+                top: 18px;
+            }
+            &:nth-child(3) {
+                top: 32px;
+            }
+        }
+    }
+     
+    // ハンバーガーメニューアニメーション
+    .Toggle.active span:nth-child(1) {
+        top: 18px;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+     
+    .Toggle.active span:nth-child(2),
+    .Toggle.active span:nth-child(3) {
+        top: 18px;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+     
+
     // ヘッダー
     header{
         width: 250px;
         height: 100vh;
         background: #D07D3E;
         position: fixed;
+
+        @media screen and ( max-width: 1080px ){
+            width: 100%;
+            height: 100vh;
+            display: none;
+        }
 
         ul{
             height: 100%;
@@ -70,6 +143,10 @@ body{
     main{
         padding-left: 250px;
 
+        @media screen and ( max-width: 1080px ){
+            padding: 0;
+        }
+
         .flame{
             padding: 0 25px;
             max-width: $mainPc;
@@ -81,12 +158,12 @@ body{
 
                 // 各タイトル
                 .title{
-                    padding: 25px 0;
                     text-align: center;
 
                     h2{
                         font-size: 5rem;
                         font-family: 'Pacifico', cursive;
+                        padding: 75px 0 25px 0;
                     }
                 }
             }
@@ -100,6 +177,11 @@ body{
                 img{
                     width: 500px;
                     height: 500px;
+
+                    @media screen and ( max-width: 1080px ){
+                        width: 80%;
+                        height: auto;
+                    }
                 }
             }
 
@@ -126,22 +208,27 @@ body{
                         font-size: 2rem;
                         margin: 0 auto;
 
-                        tbody{
-                        
-                            tr{
+                        @media screen and ( max-width: 1080px ){
+                            width: 80%;
+                        }
 
+                        tbody{
+                            tr{
                                 th, td{
                                     text-align-last: left;
                                     padding-bottom: 20px;
                                 }
-                                
                                 th{
                                     padding: 0 30px 0 0;
                                     display: flex;
+                                    @media screen and ( max-width: 1080px ){
+                                        display: block;
+                                    }
                                 }
-        
                                 td{
-        
+                                    @media screen and ( max-width: 1080px ){
+                                        display: inline-block;
+                                    }
                                     ul{
                                         margin: 0;
                                         padding-left: 20px;
@@ -154,12 +241,16 @@ body{
             }
         }
 
+        ///////////////////////////////////////
+        // 作品紹介
+        ///////////////////////////////////////
         .work{
             
             &__main{
 
                 &--each{
-                    min-width: 100%;
+                    max-width: 100%;
+                    margin-bottom: 50px;
                     
                     .image{
                         margin: 0;
@@ -171,18 +262,108 @@ body{
                     }
                     .title{
                         font-size: 2rem;
+                        display: inline-block;
+                        text-align: left;
+                    }
+                    .button{
+                        width: 100%;
+                        padding-top: 10px;
+                        text-align: center;
+                    }
+                }
+
+                // モーダルウィンドウ
+                .modalWindow {
+                    display: none;
+                    position: fixed;
+                    z-index: 10; /*サイトによってここの数値は調整 */
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+
+                    .modalBackground {
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(30,30,30,0.9);
+                    }
+                    
+                    .modalWrapper {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform:translate(-50%,-50%);
+                        width: 70%;
+                        max-width: 500px;
+                        padding: 10px 30px;
+                        background-color: #fff;
+                        height: 80vh;
+                        overflow: scroll;
+
+                        // モーダルウィンドウ　内容
+                        .modalContents{
+                            font-size: 1.5rem;
+                            
+                            .image{
+                                margin: 0 0 40px 0;
+
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                            .title{
+                                font-size: 2rem;
+                            }
+                            .explanation{
+                                padding: 20px;
+                                background: #E3E3E3;
+                                
+                                table{
+                                    tr{
+                                        th, td{
+                                            padding: 5px 0;
+                                        }
+                                        th{
+                                            padding-right: 30px;
+                                        }
+                                    }
+                                }
+                            }
+                            h4{
+                                margin-bottom: 10px;
+                                border-bottom: 2px solid #000;
+                                font-size: 2rem;   
+                            }
+                            p{
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+
+                    .modalClose {
+                        position: absolute;
+                        top: 0.5rem;
+                        right: 1rem;
+                        cursor: pointer;
+                        font-size: 2rem;
                     }
                 }
             }
         }
     }
 
+    ///////////////////////////////////////
+    // スキル紹介
+    ///////////////////////////////////////
     .skill{
 
         &__main{
             ul{
+                padding: 0;
                 display: flex;
                 flex-wrap: wrap;
+                justify-content: center;
                 list-style-type: none;
 
                 li{
@@ -193,10 +374,17 @@ body{
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    border-top: 5px solid #E99835;
-                    border-left: 5px solid #E99835;
-                    border-right: 5px solid #208EC1;
-                    border-bottom: 5px solid #208EC1;
+                    border-top: 8px solid #E99835;
+                    border-left: 8px solid #E99835;
+                    border-right: 8px solid #208EC1;
+                    border-bottom: 8px solid #208EC1;
+                    background: #fff;
+                    box-shadow: 0 0 4px 0 rgba( 0, 0, 0, 0.4 );
+
+                    @media screen and ( max-width: 1080px ){
+                        width: 100px;
+                        height: 100px;
+                    }
 
                     .title, .name{
                         padding: 0;
@@ -208,16 +396,120 @@ body{
                     }
                     .name{
                         font-size: 2rem;
+                        text-align: center;
+                    }
+
+                    .front{
+                        display: inline-block;
+                    }
+                    .back{
+                        display: none;
+                        font-size: 1.5rem;
+                        padding: 5px;
+                    }
+                }
+
+
+
+                .html:hover{
+                    .front{
+                        display: none;
+                    }
+                    .back{
+                        display: inline-block;
+                    }
+                }
+                .css:hover{
+                    .front{
+                        display: none;
+                    }
+                    .back{
+                        display: inline-block;
+                    }
+                }
+                .javascript:hover{
+                    .front{
+                        display: none;
+                    }
+                    .back{
+                        display: inline-block;
+                    }
+                }
+                .php:hover{
+                    .front{
+                        display: none;
+                    }
+                    .back{
+                        display: inline-block;
+                    }
+                }
+                .mysql:hover{
+                    .front{
+                        display: none;
+                    }
+                    .back{
+                        display: inline-block;
+                    }
+                }
+                .adobexd:hover{
+                    .front{
+                        display: none;
+                    }
+                    .back{
+                        display: inline-block;
+                    }
+                }
+                .git:hover{
+                    .front{
+                        display: none;
+                    }
+                    .back{
+                        display: inline-block;
+                    }
+                }
+                .github:hover{
+                    .front{
+                        display: none;
+                    }
+                    .back{
+                        display: inline-block;
+                    }
+                }
+                .jquery:hover{
+                    .front{
+                        display: none;
+                    }
+                    .back{
+                        display: inline-block;
+                    }
+                }
+                .bootstrap:hover{
+                    .front{
+                        display: none;
+                    }
+                    .back{
+                        display: inline-block;
+                    }
+                }
+                .wordpress:hover{
+                    .front{
+                        display: none;
+                    }
+                    .back{
+                        display: inline-block;
                     }
                 }
             }
         }
     }
 
+    ///////////////////////////////////////
+    // お問い合わせフォーム
+    ///////////////////////////////////////
     .contact{
         width: 80%;
         margin: 0 auto;
-        height: 100vh;
+
 
         // 入力フォーム text
         &--form{
@@ -231,12 +523,13 @@ body{
             .form_input{
                 position: relative;
     
+                // name email message
                 input[type='text'] {
                     font: 15px/24px sans-serif;
                     box-sizing: border-box;
                     width: 100%;
                     letter-spacing: 1px;
-                    padding-left: 4em;
+                    padding-left: 7rem;
                     &:focus{
                         outline: none;
                     }
@@ -277,53 +570,13 @@ body{
                     transition: 0.3s;
                     color: #da3c41;
                 }
+            }
 
-                textarea{
-                    font: 15px/24px sans-serif;
-                    box-sizing: border-box;
-                    width: 100%;
-                    letter-spacing: 1px;
-                    padding-left: 4em;
-                    &:focus{
-                        outline: none;
-                    }
-                }
-                .input{
-                    padding: 4px 0;
-                    border: 0;
-                    border-bottom: 1px solid #1b2538;
-                    background-color: transparent;
-                }
-                .input ~ .input_line {
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 0;
-                    height: 2px;
-                    transition: 0.4s;
-                    background-color: #da3c41;
-                }
-                .input:focus ~ .input_line,
-                .form_input.input ~ .input_line {
-                    width: 100%;
-                    transition: 0.4s;
-                }
-                .input ~ label {
-                    position: absolute;
-                    padding-left: 0px;
-                    // z-index: -1;
-                    top: 6px;
-                    left: 0;
-                    transition: 0.3s;
-                    letter-spacing: 0.5px;
-                    color: #aaaaaa;
-                }
-                .input:focus ~ label, .form_input.input ~ label {
-                    font-size: 12px;
-                    top: -16px;
-                    transition: 0.3s;
-                    color: #da3c41;
-                }
+            .name{
+                margin-top: 0;
+            }
+            .message{
+                margin-bottom: 100px;
             }
             
             // 入力フォーム primary
@@ -352,6 +605,10 @@ body{
         height: 50px;
         padding-left: 250px;
         background: #000;
+
+        @media screen and ( max-width: 1080px ){
+            padding: 0;
+        }
 
         .flame{
             width: 100%;

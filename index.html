@@ -8,35 +8,43 @@
     <title>Portfolio</title>
 </head>
 <body>
+
+    <div class="Toggle">
+    　　<span></span>
+    　　<span></span>
+    　　<span></span>
+    </div>
     
-    <header>
+    <header id="header">
+
         <ul>
             <li>
-                <a href="#top">
+                <a class="nav" href="#top">
                     <i class="fas fa-home"></i>
                 </a>
             </li>
             <li>
-                <a href="#about">
+                <a class="nav" href="#about">
                     <i class="far fa-user"></i>
                 </a>
             </li>
             <li>
-                <a href="#work">
+                <a class="nav" href="#work">
                     <i class="fas fa-desktop"></i>
                 </a>
             </li>
             <li>
-                <a href="#skill">
+                <a class="nav" href="#skill">
                     <i class="fas fa-code"></i>
                 </a>
             </li>
             <li>
-                <a href="#contact">
+                <a class="nav" href="#contact">
                     <i class="far fa-envelope"></i>
                 </a>
             </li>
         </ul>
+
     </header>
 
     <main>
@@ -71,7 +79,7 @@
                             <td>
                                 <ul>
                                     <li>韓国人の配信を視聴すること</li>
-                                    <li>色々なサイトで検証を行いサrイトの造りを見ること</li>
+                                    <li>色々なサイトで検証を行いサイトの造りを見ること</li>
                                 </ul>
                             </td>
                         </tr>
@@ -94,26 +102,173 @@
                 </div>
 
                 <div class="work__main">
+
+                    <!-- work1 -->
                     <div class="work__main--each work">
-                        <figure class="image">
-                            <img src="images/sample.png" alt="作品紹介（　ポートフォリオサイト　）">
-                        </figure>
                         <p class="title">ポートフォリオサイト</p>
+                        <figure class="image">
+                            <img src="images/workPortfolio.png" alt="作品紹介（　ポートフォリオサイト　）">
+                        </figure>
+                        <div class="button">
+                            <button id="openModal" class="work1" onclick="work1();">詳細</button>
+                        </div>
                     </div>
 
+                    <section id="modalWindow" class="modalWindow">
+                        <div id="modalBackground" class="modalBackground"></div>
+                        <div class="modalWrapper">
+
+                            <div class="modalContents">
+                                <h3 class="title">ポートフォリオサイト</h3>
+                                <figure class="image">
+                                    <img src="images/workPortfolio.png" alt="ポートフォリオ">
+                                </figure>
+                                <div class="explanation">
+                                    <table>
+                                        <tr>
+                                            <th>制作時期</th>
+                                            <td>2020/09/04</td>
+                                        </tr>
+                                        <tr>
+                                            <th>制作時間</th>
+                                            <td>12時間</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <h4>制作動機</h4>
+                                <p>
+                                    就職活動・ゼミでポートフォリオサイトが必要になったため
+                                </p>
+                                <h4>テーマ</h4>
+                                <p>
+                                    ・自分の個性や持っているスキルが一目で分かる<br>
+                                    ・後輩がコードを見ても分かり自分自身で説明できる
+                                </p>
+                                <h4>工夫点</h4>
+                                <p>
+                                    ・このサイト専用のロゴを作成し見開き３秒以内の場所に表示することで閲覧者の興味を惹くようにした<br>
+                                    ・伝えたい情報を強調するために使用配色数を抑え、また余白を意識した
+                                </p>
+                                <h4>反省点</h4>
+                                <p>
+                                    ・
+                                </p>
+
+                            </div>
+                            <div id="modalClose" class="modalClose">
+                                ×
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- work2 -->
                     <div class="work__main--each work">
-                        <figure class="image">
-                            <img src="images/sample.png" alt="作品紹介（　ポートフォリオサイト　）">
-                        </figure>
                         <p class="title">ポートフォリオサイト</p>
+                        <figure class="image">
+                            <img src="images/workPortfolio.png" alt="作品紹介（　ポートフォリオサイト　）">
+                        </figure>
+                        <div class="button">
+                            <button id="openModal" class="work1" onclick="work1();">詳細</button>
+                        </div>
                     </div>
 
+                    <section id="modalWindow" class="modalWindow">
+                        <div id="modalBackground" class="modalBackground"></div>
+                        <div class="modalWrapper">
+                            <div class="modalContents">
+                                <h3 class="title">ポートフォリオサイト</h3>
+                                <div class="explanation">
+                                    <table>
+                                        <tr>
+                                            <th>制作時期</th>
+                                            <td>2020/09/04</td>
+                                        </tr>
+                                        <tr>
+                                            <th>制作時間</th>
+                                            <td>12時間</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <h4>制作動機</h4>
+                                <p>
+                                    就職活動・ゼミでポートフォリオサイトが必要になったため
+                                </p>
+                                <h4>テーマ</h4>
+                                <p>
+                                    ・自分の個性や持っているスキルが一目で分かる<br>
+                                    ・後輩がコードを見ても分かり自分自身で説明できる
+                                </p>
+                                <h4>工夫点</h4>
+                                <p>
+                                    ・このサイト専用のロゴを作成し見開き３秒以内の場所に表示することで閲覧者の興味を惹くようにした<br>
+                                    ・伝えたい情報を強調するために使用配色数を抑え、また余白を意識した
+                                </p>
+                                <h4>反省点</h4>
+                                <p>
+                                    ・
+                                </p>
+
+                            </div>
+                            <div id="modalClose" class="modalClose">
+                                ×
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- work3 -->
                     <div class="work__main--each work">
-                        <figure class="image">
-                            <img src="images/sample.png" alt="作品紹介（　ポートフォリオサイト　）">
-                        </figure>
                         <p class="title">ポートフォリオサイト</p>
+                        <figure class="image">
+                            <img src="images/workPortfolio.png" alt="作品紹介（　ポートフォリオサイト　）">
+                        </figure>
+                        <div class="button">
+                            <button id="openModal" class="work1" onclick="work1();">詳細</button>
+                        </div>
                     </div>
+
+                    <section id="modalWindow" class="modalWindow">
+                        <div id="modalBackground" class="modalBackground"></div>
+                        <div class="modalWrapper">
+                            <div class="modalContents">
+                                <h3 class="title">ポートフォリオサイト</h3>
+                                <div class="explanation">
+                                    <table>
+                                        <tr>
+                                            <th>制作時期</th>
+                                            <td>2020/09/04</td>
+                                        </tr>
+                                        <tr>
+                                            <th>制作時間</th>
+                                            <td>12時間</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <h4>制作動機</h4>
+                                <p>
+                                    就職活動・ゼミでポートフォリオサイトが必要になったため
+                                </p>
+                                <h4>テーマ</h4>
+                                <p>
+                                    ・自分の個性や持っているスキルが一目で分かる<br>
+                                    ・後輩がコードを見ても分かり自分自身で説明できる
+                                </p>
+                                <h4>工夫点</h4>
+                                <p>
+                                    ・このサイト専用のロゴを作成し見開き３秒以内の場所に表示することで閲覧者の興味を惹くようにした<br>
+                                    ・伝えたい情報を強調するために使用配色数を抑え、また余白を意識した
+                                </p>
+                                <h4>反省点</h4>
+                                <p>
+                                    ・
+                                </p>
+
+                            </div>
+                            <div id="modalClose" class="modalClose">
+                                ×
+                            </div>
+                        </div>
+                    </section>
+
                 </div>
             </section>
 
@@ -124,49 +279,104 @@
 
                 <div class="skill__main">
                     <ul>
-                        <li>
-                            <p class="title">Hm</p>
-                            <p class="name">Html</p>
+                        <li class="html">
+                            <div class="front">
+                                <p class="title">Hm</p>
+                                <p class="name">Html</p>
+                            </div>
+                            <div class="back">
+                                <p>専門学校入学時からやってきました</p>
+                            </div>
                         </li>
-                        <li>
-                            <p class="title">Cs</p>
-                            <p class="name">Css</p>
+                        <li class="css">
+                            <div class="front">
+                                <p class="title">Cs</p>
+                                <p class="name">Css</p>
+                            </div>
+                            <div class="back">
+                                <p></p>
+                            </div>
                         </li>
-                        <li>
-                            <p class="title">Js</p>
-                            <p class="name">JavaScript</p>
+                        <li class="javascript">
+                            <div class="front">
+                                <p class="title">Js</p>
+                                <p class="name">JavaScript</p>
+                            </div>
+                            <div class="back">
+                                <p></p>
+                            </div>
                         </li>
-                        <li>
-                            <p class="title">Pp</p>
-                            <p class="name">PHP</p>
+                        <li class="php">
+                            <div class="front">
+                                <p class="title">Pp</p>
+                                <p class="name">PHP</p>
+                            </div>
+                            <div class="back">
+                                <p></p>
+                            </div>
                         </li>
-                        <li>
-                            <p class="title">Ms</p>
-                            <p class="name">MySQL</p>
+                        <li class="mysql">
+                            <div class="front">
+                                <p class="title">Ms</p>
+                                <p class="name">MySQL</p>
+                            </div>
+                            <div class="back">
+                                <p></p>
+                            </div>
                         </li>
-                        <li>
-                            <p class="title">Ax</p>
-                            <p class="name">AdobeXd</p>
+                        <li class="adobexd">
+                            <div class="front">
+                                <p class="title">Ax</p>
+                                <p class="name">AdobeXd</p>
+                            </div>
+                            <div class="back">
+                                <p></p>
+                            </div>
                         </li>
-                        <li>
-                            <p class="title">Gt</p>
-                            <p class="name">Git</p>
+                        <li class="git">
+                            <div class="front">
+                                <p class="title">Gt</p>
+                                <p class="name">Git</p>
+                            </div>
+                            <div class="back">
+                                <p></p>
+                            </div>
                         </li>
-                        <li>
-                            <p class="title">Gh</p>
-                            <p class="name">GitHub</p>
+                        <li class="github">
+                            <div class="front">
+                                <p class="title">Gh</p>
+                                <p class="name">GitHub</p>
+                            </div>
+                            <div class="back">
+                                <p></p>
+                            </div>
                         </li>
-                        <li>
-                            <p class="title">Jq</p>
-                            <p class="name">JQuery</p>
+                        <li class="jquery">
+                            <div class="front">
+                                <p class="title">Jq</p>
+                                <p class="name">JQuery</p>
+                            </div>
+                            <div class="back">
+                                <p></p>
+                            </div>
                         </li>
-                        <li>
-                            <p class="title">Bs</p>
-                            <p class="name">BootStrap</p>
+                        <li class="bootstrap">
+                            <div class="front">
+                                <p class="title">Bs</p>
+                                <p class="name">BootStrap</p>
+                            </div>
+                            <div class="back">
+                                <p></p>
+                            </div>
                         </li>
-                        <li>
-                            <p class="title">Wp</p>
-                            <p class="name">WordPress</p>
+                        <li class="wordpress">
+                            <div class="front">
+                                <p class="title">Wp</p>
+                                <p class="name">WordPress</p>
+                            </div>
+                            <div class="back">
+                                <p></p>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -179,23 +389,22 @@
                 </div>
                 <form action="" class="contact--form">
 
-                    <div class="form_input">
+                    <div class="form_input name">
                         <input class="input" type="text" id="name" placeholder="" name="name" required>
                         <label>Name</label>
                         <span class="input_line"></span>
                     </div>
-
-                    <div class="form_input">
+                    <div class="form_input email">
                         <input class="input" type="text" id="email" placeholder="" name="email" required>
                         <label>Email</label>
                         <span class="input_line"></span>
                     </div>
-
-                    <div class="form_input">
-                        <textarea class="input" type="text" id="massage" placeholder="" name="massage" required></textarea>
-                        <label>Massage</label>
+                    <div class="form_input message">
+                        <input class="input" type="text" id="message" placeholder="" name="message" required>
+                        <label>Message</label>
                         <span class="input_line"></span>
                     </div>
+
                     <div class="form_button">
                         <input type="submit" id="content_add_button" name="contnet_" value="送信">
                     </div>
