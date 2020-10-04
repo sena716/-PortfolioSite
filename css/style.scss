@@ -41,6 +41,11 @@ body{
         display: inline-block;
     }
 
+    .aa{
+        transform: translateX(0);
+        transition: all .5s;
+    }
+
     // ハンバーガーメニュー
     .Toggle {
         display: none;
@@ -104,7 +109,8 @@ body{
         @media screen and ( max-width: 1080px ){
             width: 100%;
             height: 100vh;
-            display: none;
+            transform: translateX(-100vw);
+            transition: all .5s;
         }
 
         ul{
@@ -168,6 +174,9 @@ body{
                 }
             }
 
+            ///////////////////////////////////////
+            // トップページ
+            ///////////////////////////////////////
             .top{
                 height: 100vh;
                 display: flex;
@@ -185,6 +194,9 @@ body{
                 }
             }
 
+            ///////////////////////////////////////
+            // 自己紹介
+            ///////////////////////////////////////
             .about{
                 
                 &__profile{
@@ -267,8 +279,29 @@ body{
                     }
                     .button{
                         width: 100%;
-                        padding-top: 10px;
+                        padding-top: 20px;
                         text-align: center;
+
+                        button{
+                            background: #208EC1;
+                            display: inline-block;
+                            padding: 0.5em 1em;
+                            text-decoration: none;
+                            color: #FFF;
+                            border: none;
+                            border-bottom: solid 4px #627295;
+                            border-radius: 3px;
+
+                            &:hover{
+                                cursor: pointer;
+                            }
+
+                            &:active{
+                                -webkit-transform: translateY(4px);
+                                transform: translateY(4px);
+                                border-bottom: none;
+                            }
+                        }
                     }
                 }
 
@@ -298,7 +331,7 @@ body{
                         padding: 10px 30px;
                         background-color: #fff;
                         height: 80vh;
-                        overflow: scroll;
+                        overflow-y: scroll;
 
                         // モーダルウィンドウ　内容
                         .modalContents{
@@ -325,6 +358,7 @@ body{
                                             padding: 5px 0;
                                         }
                                         th{
+                                            text-align: left;
                                             padding-right: 30px;
                                         }
                                     }
@@ -404,99 +438,18 @@ body{
                     }
                     .back{
                         display: none;
+                        text-align: center;
                         font-size: 1.5rem;
                         padding: 5px;
                     }
-                }
 
-
-
-                .html:hover{
-                    .front{
-                        display: none;
-                    }
-                    .back{
-                        display: inline-block;
-                    }
-                }
-                .css:hover{
-                    .front{
-                        display: none;
-                    }
-                    .back{
-                        display: inline-block;
-                    }
-                }
-                .javascript:hover{
-                    .front{
-                        display: none;
-                    }
-                    .back{
-                        display: inline-block;
-                    }
-                }
-                .php:hover{
-                    .front{
-                        display: none;
-                    }
-                    .back{
-                        display: inline-block;
-                    }
-                }
-                .mysql:hover{
-                    .front{
-                        display: none;
-                    }
-                    .back{
-                        display: inline-block;
-                    }
-                }
-                .adobexd:hover{
-                    .front{
-                        display: none;
-                    }
-                    .back{
-                        display: inline-block;
-                    }
-                }
-                .git:hover{
-                    .front{
-                        display: none;
-                    }
-                    .back{
-                        display: inline-block;
-                    }
-                }
-                .github:hover{
-                    .front{
-                        display: none;
-                    }
-                    .back{
-                        display: inline-block;
-                    }
-                }
-                .jquery:hover{
-                    .front{
-                        display: none;
-                    }
-                    .back{
-                        display: inline-block;
-                    }
-                }
-                .bootstrap:hover{
-                    .front{
-                        display: none;
-                    }
-                    .back{
-                        display: inline-block;
-                    }
-                }
-                .wordpress:hover{
-                    .front{
-                        display: none;
-                    }
-                    .back{
-                        display: inline-block;
+                    &:hover{
+                        .front{
+                            display: none;
+                        }
+                        .back{
+                            display: inline-block;
+                        }
                     }
                 }
             }

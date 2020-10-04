@@ -36,6 +36,11 @@ body .active {
   display: inline-block;
 }
 
+body .aa {
+  transform: translateX(0);
+  transition: all .5s;
+}
+
 body .Toggle {
   display: none;
   position: fixed;
@@ -102,7 +107,8 @@ body header {
   body header {
     width: 100%;
     height: 100vh;
-    display: none;
+    transform: translateX(-100vw);
+    transition: all .5s;
   }
 }
 
@@ -257,8 +263,29 @@ body main .work__main--each .title {
 
 body main .work__main--each .button {
   width: 100%;
-  padding-top: 10px;
+  padding-top: 20px;
   text-align: center;
+}
+
+body main .work__main--each .button button {
+  background: #208EC1;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #FFF;
+  border: none;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+}
+
+body main .work__main--each .button button:hover {
+  cursor: pointer;
+}
+
+body main .work__main--each .button button:active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  border-bottom: none;
 }
 
 body main .work__main .modalWindow {
@@ -288,7 +315,7 @@ body main .work__main .modalWindow .modalWrapper {
   padding: 10px 30px;
   background-color: #fff;
   height: 80vh;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 body main .work__main .modalWindow .modalWrapper .modalContents {
@@ -318,6 +345,7 @@ body main .work__main .modalWindow .modalWrapper .modalContents .explanation tab
 }
 
 body main .work__main .modalWindow .modalWrapper .modalContents .explanation table tr th {
+  text-align: left;
   padding-right: 30px;
 }
 
@@ -390,95 +418,16 @@ body .skill__main ul li .front {
 
 body .skill__main ul li .back {
   display: none;
+  text-align: center;
   font-size: 1.5rem;
   padding: 5px;
 }
 
-body .skill__main ul .html:hover .front {
+body .skill__main ul li:hover .front {
   display: none;
 }
 
-body .skill__main ul .html:hover .back {
-  display: inline-block;
-}
-
-body .skill__main ul .css:hover .front {
-  display: none;
-}
-
-body .skill__main ul .css:hover .back {
-  display: inline-block;
-}
-
-body .skill__main ul .javascript:hover .front {
-  display: none;
-}
-
-body .skill__main ul .javascript:hover .back {
-  display: inline-block;
-}
-
-body .skill__main ul .php:hover .front {
-  display: none;
-}
-
-body .skill__main ul .php:hover .back {
-  display: inline-block;
-}
-
-body .skill__main ul .mysql:hover .front {
-  display: none;
-}
-
-body .skill__main ul .mysql:hover .back {
-  display: inline-block;
-}
-
-body .skill__main ul .adobexd:hover .front {
-  display: none;
-}
-
-body .skill__main ul .adobexd:hover .back {
-  display: inline-block;
-}
-
-body .skill__main ul .git:hover .front {
-  display: none;
-}
-
-body .skill__main ul .git:hover .back {
-  display: inline-block;
-}
-
-body .skill__main ul .github:hover .front {
-  display: none;
-}
-
-body .skill__main ul .github:hover .back {
-  display: inline-block;
-}
-
-body .skill__main ul .jquery:hover .front {
-  display: none;
-}
-
-body .skill__main ul .jquery:hover .back {
-  display: inline-block;
-}
-
-body .skill__main ul .bootstrap:hover .front {
-  display: none;
-}
-
-body .skill__main ul .bootstrap:hover .back {
-  display: inline-block;
-}
-
-body .skill__main ul .wordpress:hover .front {
-  display: none;
-}
-
-body .skill__main ul .wordpress:hover .back {
+body .skill__main ul li:hover .back {
   display: inline-block;
 }
 

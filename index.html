@@ -79,7 +79,7 @@
                             <td>
                                 <ul>
                                     <li>韓国人の配信を視聴すること</li>
-                                    <li>色々なサイトで検証を行いサイトの造りを見ること</li>
+                                    <li>色々なサイトで検証を行いサイトの構造を見ること</li>
                                 </ul>
                             </td>
                         </tr>
@@ -107,21 +107,21 @@
                     <div class="work__main--each work">
                         <p class="title">ポートフォリオサイト</p>
                         <figure class="image">
-                            <img src="images/workPortfolio.png" alt="作品紹介（　ポートフォリオサイト　）">
+                            <img src="images/work1Portfolio.png" alt="作品紹介（　ポートフォリオサイト　）">
                         </figure>
                         <div class="button">
-                            <button id="openModal" class="work1" onclick="work1();">詳細</button>
+                            <button id="work1openModal" class="work1" onclick="work1();">詳細</button>
                         </div>
                     </div>
 
-                    <section id="modalWindow" class="modalWindow">
-                        <div id="modalBackground" class="modalBackground"></div>
+                    <section id="work1modalWindow" class="modalWindow">
+                        <div id="work1modalBackground" class="modalBackground"></div>
                         <div class="modalWrapper">
 
                             <div class="modalContents">
                                 <h3 class="title">ポートフォリオサイト</h3>
                                 <figure class="image">
-                                    <img src="images/workPortfolio.png" alt="ポートフォリオ">
+                                    <img src="images/work1Portfolio.png" alt="ポートフォリオ">
                                 </figure>
                                 <div class="explanation">
                                     <table>
@@ -133,6 +133,10 @@
                                             <th>制作時間</th>
                                             <td>12時間</td>
                                         </tr>
+                                        <tr>
+                                            <th>主な使用言語</th>
+                                            <td>HTML, CSS</td>
+                                        </tr>
                                     </table>
                                 </div>
                                 <h4>制作動機</h4>
@@ -151,11 +155,12 @@
                                 </p>
                                 <h4>反省点</h4>
                                 <p>
-                                    ・
+                                    ・最初の時点で機能やデザインまで詳細にきめておけばよかった<br>
+                                    ・class名がわかりにくくなってしまった
                                 </p>
 
                             </div>
-                            <div id="modalClose" class="modalClose">
+                            <div id="work1modalClose" class="modalClose">
                                 ×
                             </div>
                         </div>
@@ -163,53 +168,59 @@
 
                     <!-- work2 -->
                     <div class="work__main--each work">
-                        <p class="title">ポートフォリオサイト</p>
+                        <p class="title">カードゲーム</p>
                         <figure class="image">
-                            <img src="images/workPortfolio.png" alt="作品紹介（　ポートフォリオサイト　）">
+                            <img src="images/work2Cardegame.png" alt="作品紹介（　カードゲーム　）">
                         </figure>
                         <div class="button">
-                            <button id="openModal" class="work1" onclick="work1();">詳細</button>
+                            <button id="openModal" class="work2" onclick="work2();">詳細</button>
                         </div>
                     </div>
 
-                    <section id="modalWindow" class="modalWindow">
-                        <div id="modalBackground" class="modalBackground"></div>
+                    <section id="work2modalWindow" class="modalWindow">
+                        <div id="work2modalBackground" class="modalBackground"></div>
                         <div class="modalWrapper">
                             <div class="modalContents">
-                                <h3 class="title">ポートフォリオサイト</h3>
+                                <h3 class="title">カードゲーム</h3>
+                                <figure class="image">
+                                    <img src="images/work2Cardegame.png" alt="ポートフォリオ">
+                                </figure>
                                 <div class="explanation">
                                     <table>
                                         <tr>
                                             <th>制作時期</th>
-                                            <td>2020/09/04</td>
+                                            <td>2019/10/01</td>
                                         </tr>
                                         <tr>
                                             <th>制作時間</th>
-                                            <td>12時間</td>
+                                            <td>約60時間</td>
+                                        </tr>
+                                        <tr>
+                                            <th>主な使用言語</th>
+                                            <td>C#</td>
                                         </tr>
                                     </table>
                                 </div>
                                 <h4>制作動機</h4>
                                 <p>
-                                    就職活動・ゼミでポートフォリオサイトが必要になったため
+                                    授業の一環
                                 </p>
                                 <h4>テーマ</h4>
                                 <p>
-                                    ・自分の個性や持っているスキルが一目で分かる<br>
-                                    ・後輩がコードを見ても分かり自分自身で説明できる
+                                    カードゲームの作成を通してUnityやC#を理解し知識を深める
                                 </p>
                                 <h4>工夫点</h4>
                                 <p>
-                                    ・このサイト専用のロゴを作成し見開き３秒以内の場所に表示することで閲覧者の興味を惹くようにした<br>
-                                    ・伝えたい情報を強調するために使用配色数を抑え、また余白を意識した
+                                    自分なりにオリジナリティのあるカードゲームにした
                                 </p>
                                 <h4>反省点</h4>
                                 <p>
-                                    ・
+                                    ・後々からごちゃごちゃになってしまったので、わからない点はすぐに調べるべきだった<br>
+                                    ・授業の内容を理解するので精一杯だったので、放課後等を利用して自分なりに進めておけばよかった
                                 </p>
 
                             </div>
-                            <div id="modalClose" class="modalClose">
+                            <div id="work2modalClose" class="modalClose">
                                 ×
                             </div>
                         </div>
@@ -217,53 +228,121 @@
 
                     <!-- work3 -->
                     <div class="work__main--each work">
-                        <p class="title">ポートフォリオサイト</p>
+                        <p class="title">TodoList ( 作成中 )</p>
                         <figure class="image">
-                            <img src="images/workPortfolio.png" alt="作品紹介（　ポートフォリオサイト　）">
+                            <img src="images/work3Todo.png" alt="作品紹介（　TodoList　）">
                         </figure>
                         <div class="button">
-                            <button id="openModal" class="work1" onclick="work1();">詳細</button>
+                            <button id="openModal" class="work3" onclick="work3();">詳細</button>
                         </div>
                     </div>
 
-                    <section id="modalWindow" class="modalWindow">
-                        <div id="modalBackground" class="modalBackground"></div>
+                    <section id="work3modalWindow" class="modalWindow">
+                        <div id="work3modalBackground" class="modalBackground"></div>
                         <div class="modalWrapper">
                             <div class="modalContents">
-                                <h3 class="title">ポートフォリオサイト</h3>
+                                <h3 class="title">TodoList ( 作成中 )</h3>
+                                <figure class="image">
+                                    <img src="images/work3Todo.png" alt="作品紹介（　TodoList　）">
+                                </figure>
                                 <div class="explanation">
                                     <table>
                                         <tr>
                                             <th>制作時期</th>
-                                            <td>2020/09/04</td>
+                                            <td>2020/08/15</td>
                                         </tr>
                                         <tr>
                                             <th>制作時間</th>
-                                            <td>12時間</td>
+                                            <td>24時間</td>
+                                        </tr>
+                                        <tr>
+                                            <th>主な使用言語</th>
+                                            <td>JavaScript</td>
                                         </tr>
                                     </table>
                                 </div>
                                 <h4>制作動機</h4>
                                 <p>
-                                    就職活動・ゼミでポートフォリオサイトが必要になったため
+                                    JavaScript勉強後のアウトプットとして
                                 </p>
                                 <h4>テーマ</h4>
                                 <p>
-                                    ・自分の個性や持っているスキルが一目で分かる<br>
-                                    ・後輩がコードを見ても分かり自分自身で説明できる
+                                    ・コードがごちゃごちゃにならないようにコメントアウトを多くつけることを意識する<br>
+                                    ・コードを追いやすいようにそれぞれの配置順を意識する
                                 </p>
                                 <h4>工夫点</h4>
                                 <p>
-                                    ・このサイト専用のロゴを作成し見開き３秒以内の場所に表示することで閲覧者の興味を惹くようにした<br>
-                                    ・伝えたい情報を強調するために使用配色数を抑え、また余白を意識した
+                                    ・他のTodoListにはあまりない新しく作成したTodoにはnewをつけた<br>
+                                    ・複数タスクを同時に完了したり削除したりするようにした
                                 </p>
                                 <h4>反省点</h4>
                                 <p>
-                                    ・
+                                    ・ちょっとしたバグを無視して作成をせず、バグが出たタイミングで完璧にするべきだった<br>
+                                    ・作成しながらデザインを決めてしまった
                                 </p>
 
                             </div>
-                            <div id="modalClose" class="modalClose">
+                            <div id="work3modalClose" class="modalClose">
+                                ×
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- work4 -->
+                    <div class="work__main--each work">
+                        <p class="title">掲示板</p>
+                        <figure class="image">
+                            <img src="images/work4Sns.png" alt="作品紹介（　掲示板　）">
+                        </figure>
+                        <div class="button">
+                            <button id="openModal" class="work4" onclick="work4();">詳細</button>
+                        </div>
+                    </div>
+
+                    <section id="work4modalWindow" class="modalWindow">
+                        <div id="work4modalBackground" class="modalBackground"></div>
+                        <div class="modalWrapper">
+                            <div class="modalContents">
+                                <h3 class="title">掲示板</h3>
+                                <figure class="image">
+                                    <img src="images/work4Sns.png" alt="作品紹介（　掲示板　）">
+                                </figure>
+                                <div class="explanation">
+                                    <table>
+                                        <tr>
+                                            <th>制作時期</th>
+                                            <td>2020/07/01</td>
+                                        </tr>
+                                        <tr>
+                                            <th>制作時間</th>
+                                            <td>20時間</td>
+                                        </tr>
+                                        <tr>
+                                            <th>主な使用言語</th>
+                                            <td>PHP</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <h4>制作動機</h4>
+                                <p>
+                                    授業の一環として
+                                </p>
+                                <h4>テーマ</h4>
+                                <p>
+                                    掲示板の作成を通してPHP・MySqlを理解し知識を深める
+                                </p>
+                                <h4>工夫点</h4>
+                                <p>
+                                    ・後から自分で見てもコードを理解できるようにする<br>
+                                    ・最初はわからずとも自分なりにコードを書いてみる
+                                </p>
+                                <h4>反省点</h4>
+                                <p>
+                                    環境設定に手こずってしまった
+                                </p>
+
+                            </div>
+                            <div id="work4modalClose" class="modalClose">
                                 ×
                             </div>
                         </div>
@@ -294,7 +373,7 @@
                                 <p class="name">Css</p>
                             </div>
                             <div class="back">
-                                <p></p>
+                                <p>最近はbemという命名規則を使用しています</p>
                             </div>
                         </li>
                         <li class="javascript">
@@ -303,7 +382,7 @@
                                 <p class="name">JavaScript</p>
                             </div>
                             <div class="back">
-                                <p></p>
+                                <p>TodoListを作成しました</p>
                             </div>
                         </li>
                         <li class="php">
@@ -312,7 +391,7 @@
                                 <p class="name">PHP</p>
                             </div>
                             <div class="back">
-                                <p></p>
+                                <p>掲示板を作成しました</p>
                             </div>
                         </li>
                         <li class="mysql">
@@ -321,7 +400,7 @@
                                 <p class="name">MySQL</p>
                             </div>
                             <div class="back">
-                                <p></p>
+                                <p>現在MySqlを使用してTodoListを作成しています</p>
                             </div>
                         </li>
                         <li class="adobexd">
@@ -330,7 +409,7 @@
                                 <p class="name">AdobeXd</p>
                             </div>
                             <div class="back">
-                                <p></p>
+                                <p>サイト作成前に使用しています</p>
                             </div>
                         </li>
                         <li class="git">
@@ -339,7 +418,7 @@
                                 <p class="name">Git</p>
                             </div>
                             <div class="back">
-                                <p></p>
+                                <p>作品制作で使用しています</p>
                             </div>
                         </li>
                         <li class="github">
@@ -348,25 +427,7 @@
                                 <p class="name">GitHub</p>
                             </div>
                             <div class="back">
-                                <p></p>
-                            </div>
-                        </li>
-                        <li class="jquery">
-                            <div class="front">
-                                <p class="title">Jq</p>
-                                <p class="name">JQuery</p>
-                            </div>
-                            <div class="back">
-                                <p></p>
-                            </div>
-                        </li>
-                        <li class="bootstrap">
-                            <div class="front">
-                                <p class="title">Bs</p>
-                                <p class="name">BootStrap</p>
-                            </div>
-                            <div class="back">
-                                <p></p>
+                                <p>作品制作で使用しています</p>
                             </div>
                         </li>
                         <li class="wordpress">
@@ -375,7 +436,7 @@
                                 <p class="name">WordPress</p>
                             </div>
                             <div class="back">
-                                <p></p>
+                                <p>アルバイトで使用しています</p>
                             </div>
                         </li>
                     </ul>
